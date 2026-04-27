@@ -1,6 +1,6 @@
 # Module 07
 
-## Exercise
+## Exercise: Performance Testing
 
 Screenshot of the performance testings:
 1. test_plan_1.jmx
@@ -14,3 +14,10 @@ Screenshot of the performance testings:
 3. test_plan_3.jmx
 ![T3G](./assets/images/test3_gui.png)
 ![T3C](./assets/images/test3_cli.png)
+
+
+## Exercise: Profiling with IntelliJ IDEA
+1. Optimizing method getAllStudentWithCourse
+![Unoptimized Code](./assets/images/prof1_unoptimized_code.png)
+![Optimized Code](./assets/images/prof1_optimized_code.png)
+Dalam Kode sebelumnya, fungsi `getAllStudentWithCourse` memakan waktu sangat banyak (4.4s) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan 1.8s, performa aplikasi meningkat drastis, lebih dari 50%.
