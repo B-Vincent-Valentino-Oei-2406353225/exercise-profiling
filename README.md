@@ -22,7 +22,12 @@ Screenshot of the performance testings:
 ![Optimized Code](./assets/images/prof1_optimized_code.png)
 Dalam Kode sebelumnya, fungsi `getAllStudentWithCourse` memakan waktu sangat banyak (4.4s) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan 1.8s, performa aplikasi meningkat drastis, lebih dari 50%.
 
-1. Optimizing method joinStudentNames
+2Optimizing method joinStudentNames
    ![Unoptimized Code](./assets/images/prof2_unoptimized_code.png)
    ![Optimized Code](./assets/images/prof2_optimized_code.png)
    Dalam Kode sebelumnya, fungsi `joinStudentNames` memakan waktu sangat banyak (~700ms) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan ~100ms, performa aplikasi meningkat drastis, lebih dari 50%.
+
+3Optimizing method findStudentWithHighestGpa
+   ![Unoptimized Code](./assets/images/prof3_unoptimized_code.png)
+   ![Optimized Code](./assets/images/prof3_optimized_code.png)
+   Dalam Kode sebelumnya, fungsi `findStudentWithHighestGpa` memakan lumayan banyak (~150ms) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan ~55ms, performa aplikasi meningkat drastis, lebih dari 50%.
