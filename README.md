@@ -20,16 +20,23 @@ Screenshot of the performance testings:
 1. Optimizing method getAllStudentWithCourse
    ![Unoptimized Code](./assets/images/prof1_unoptimized_code.png)
    ![Optimized Code](./assets/images/prof1_optimized_code.png)
+   Berikut hasil JMeter setelah optimisasi:
+   ![Test 1 After Optimization](./assets/images/test1_after_opt.png)
    Dalam Kode sebelumnya, fungsi `getAllStudentWithCourse` memakan waktu sangat banyak (4.4s) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan 1.8s, performa aplikasi meningkat drastis, lebih dari 50%.
+
 
 2. Optimizing method joinStudentNames
    ![Unoptimized Code](./assets/images/prof2_unoptimized_code.png)
    ![Optimized Code](./assets/images/prof2_optimized_code.png)
+   Berikut hasil JMeter setelah optimisasi:
+   ![Test 2 After Optimization](./assets/images/test2_after_opt.png)
    Dalam Kode sebelumnya, fungsi `joinStudentNames` memakan waktu sangat banyak (~700ms) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan ~100ms, performa aplikasi meningkat drastis, lebih dari 50%.
 
 3. Optimizing method findStudentWithHighestGpa
    ![Unoptimized Code](./assets/images/prof3_unoptimized_code.png)
    ![Optimized Code](./assets/images/prof3_optimized_code.png)
+   Berikut hasil JMeter setelah optimisasi:
+   ![Test 3 After Optimization](./assets/images/test3_after_opt.png)
    Dalam Kode sebelumnya, fungsi `findStudentWithHighestGpa` memakan lumayan banyak (~150ms) sekarang dengan optimisasi sesuai gambar, fungsi tersebut hanya memerlukan ~55ms, performa aplikasi meningkat drastis, lebih dari 50%.
 
 **Apakah terdapat perbedaan ketika menjalankan JMeter sebelum dan sesudah optimisasi?**
