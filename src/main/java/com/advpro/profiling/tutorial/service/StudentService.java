@@ -24,40 +24,28 @@ public class StudentService {
     private StudentCourseRepository studentCourseRepository;
 
     public List<StudentCourse> getAllStudentsWithCourses() {
-        List<Student> students = studentRepository.findAll();
-        List<StudentCourse> studentCourses = new ArrayList<>();
-        for (Student student : students) {
-            List<StudentCourse> studentCoursesByStudent = studentCourseRepository.findByStudentId(student.getId());
-            for (StudentCourse studentCourseByStudent : studentCoursesByStudent) {
-                StudentCourse studentCourse = new StudentCourse();
-                studentCourse.setStudent(student);
-                studentCourse.setCourse(studentCourseByStudent.getCourse());
-                studentCourses.add(studentCourse);
-            }
-        }
+        List<StudentCourse> studentCourses = studentCourseRepository.findAll();
         return studentCourses;
     }
 
     public Optional<Student> findStudentWithHighestGpa() {
-        List<Student> students = studentRepository.findAll();
-        Student highestGpaStudent = null;
-        double highestGpa = 0.0;
-        for (Student student : students) {
-            if (student.getGpa() > highestGpa) {
-                highestGpa = student.getGpa();
-                highestGpaStudent = student;
-            }
-        }
-        return Optional.ofNullable(highestGpaStudent);
+        Optional<Student> highestGpaStudent = studentRepository.findTopByOrderByGpaDesc();
+        return highestGpaStudent;
     }
 
     public String joinStudentNames() {
         List<Student> students = studentRepository.findAll();
-        String result = "";
+        StringBuilder studentNames = new StringBuilder();
+        boolean first = true;
         for (Student student : students) {
-            result += student.getName() + ", ";
+            if (!first) {
+                studentNames.append(", ");
+            } else {
+                first = false;
+            }
+            studentNames.append(student.getName());
         }
-        return result.substring(0, result.length() - 2);
+        return studentNames.toString();
     }
 }
 
